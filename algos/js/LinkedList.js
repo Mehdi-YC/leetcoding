@@ -418,7 +418,7 @@ class LinkedList {
 }
 
 // Test cases using assert
-const assert = require("assert");
+
 
 const list = new LinkedList();
 list.append(1);
