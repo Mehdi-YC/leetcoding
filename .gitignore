@@ -1,0 +1,5 @@
+# remove rust compile/debug folders
+leetcode/rust/target/*
+leetcode/rust/Cargo.lock
+
+# add go later
