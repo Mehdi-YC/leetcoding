@@ -1,15 +1,20 @@
 //A tree data structure where each node has at most two children.
+class TreeNode {
+    constructor(value) {
+        this.value = value
+        this.left = null
+        this.right = null
+    }
+}
 
 class BinaryTree {
     constructor(value) {
-        this.value = value;
-        this.left = null;
-        this.right = null;
+        this.head = null
     }
 
     // TODO: Insert a value into the tree
     insert(value) {
-        // Implement this
+
     }
 
     // TODO: Search for a value in the tree
