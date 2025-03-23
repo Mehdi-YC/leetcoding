@@ -216,3 +216,34 @@ This list covers the most important patterns and algorithms used in coding inter
 https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/bubble_sort/
 https://visualgo.net/
 https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+
+
+## languages list based on my interest
+# Programming Language Feature Comparison
+
+This table compares various programming languages based on their built-in support for key features.
+
+| Language  | CSV Handling | JSON Handling | Web Server (API) | Iterators | Function Chaining | Speed (vs C) | Real-Life Usage | Great for CLIs? | Easy to Write CLI Tools? |
+|-----------|-------------|---------------|------------------|-----------|------------------|--------------|----------------|----------------|-------------------------|
+| **C**     | 🟧 `libcsv`  | 🟧 `cJSON`    | 🟧 `libmicrohttpd` | ❌        | ❌               | ✅ (Fastest)  | OS, embedded, games | ✅ (but complex) | ❌ (Manual parsing) |
+| **Rust**  | ✅ `csv`    | ✅ `serde_json` | ✅ `warp`, `axum` | ✅        | ✅               | ⚡ (~C)      | Systems, web, blockchain | ✅ Excellent | ✅ `clap`, `structopt` |
+| **Go**    | ✅ `encoding/csv` | ✅ `encoding/json` | ✅ `net/http` | ✅ (`range`) | ✅ (method chaining) | ⚡ (~C) | Web, networking, cloud | ✅ Excellent | ✅ `cobra`, `urfave/cli` |
+| **Python**| ✅ `csv`    | ✅ `json`      | ✅ `Flask`, `FastAPI` | ✅ `itertools` | ✅ (via objects) | 🐢 (Slow)  | AI, scripting, web, data | ✅ (but slower) | ✅ `argparse`, `click` |
+| **JavaScript (Node.js)** | ✅ `csv-parser` | ✅ `JSON.parse` | ✅ `Express.js` | ✅ (`for..of`) | ✅ | 🐢 (Slow) | Web apps, APIs | ✅ | ✅ `commander.js`, `yargs` |
+| **Nim**   | ✅ `tables` | ✅ `json`      | ✅ `jester`      | ✅        | ✅               | ⚡ (~C)      | Web, embedded, CLI | ✅ Good | ✅ `docopt`, `cligen` |
+| **Lua**   | 🟧 `lua-csv` | 🟧 `cjson`    | 🟧 `lapis` (with OpenResty) | ❌        | ❌               | ⚡ (~C)      | Games, embedded, scripting | ✅ (but limited) | 🟧 `argparse` |
+| **V**     | ✅ `csv`    | ✅ `json`      | ✅ `vweb`        | ✅        | ✅               | ⚡ (~C)      | Web, CLI, fast tools | ✅ Very Good | ✅ Built-in (`os.args`) |
+| **D**     | ✅ `std.csv` | ✅ `std.json`  | ✅ `vibe.d`      | ✅        | ✅               | ⚡ (~C)      | Systems, finance, scripting | ✅ Excellent | ✅ `arsd.argparse` |
+
+## 🟧 Orange (Needs Third-Party Library)
+- **C and Lua** need external libraries for almost everything beyond basic file I/O.
+- **Lua lacks iterators and function chaining** natively.
+- **C requires manual CLI argument handling**, making it harder for CLI tools.
+
+## 🏆 Best for CLI & API Development
+1. **Rust & Go** → **Fast, robust, and easy CLI & API development.**  
+2. **V & D** → **Modern, fast, built-in CLI handling, simple syntax.**  
+3. **Python** → **Easiest to write, but slow for large-scale CLI tools.**  
+
+🔥 **V and D are underrated, but fantastic for fast CLI & web tools!** 🚀
+
