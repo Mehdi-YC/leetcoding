@@ -206,3 +206,8 @@ This list covers the most important patterns and algorithms used in coding inter
 - [ ] **Hash Table:** A data structure that maps keys to values using a hash function.
 
 
+# repos to check
+
+[awesome-algorithms by tayllan](https://github.com/tayllan/awesome-algorithms)
+
+[awesome DSA](https://github.com/otabek-kholmirzaev/awesome-dsa)
