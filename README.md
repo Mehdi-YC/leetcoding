@@ -2,7 +2,7 @@
 trying leetcode in Rust, Pyhon,JS and maybe Go...Zig....Ocaml.... well, any new flashy language ,maybe Nim?
 
 ---
----
+
 
 [Algo patterns](https://www.hellointerview.com/learn/code) 
 
