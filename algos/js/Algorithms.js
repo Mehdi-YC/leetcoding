@@ -60,8 +60,8 @@ function mergeSort(arr) {
     }
 
     function merge(data, left, middle, right) {
-        let left_partition = data.slice(left, middle + 1); // Include middle
-        let right_partition = data.slice(middle + 1, right + 1); // Correct range
+        let left_partition = data.slice(left, middle + 1);
+        let right_partition = data.slice(middle + 1, right + 1); 
 
         let leftIdx = 0, rightIdx = 0, dataIdx = left;
 
@@ -247,12 +247,18 @@ function lcs(str1, str2) {
  * Fibonacci Sequence: Computes the nth Fibonacci number using dynamic programming.
  * Time Complexity: O(n)
  */
+let memo_fibo  = new Map()
+memo_fibo.set(0, 0)
+memo_fibo.set(1,1)
 function fibonacci(n) {
-    // TODO: Implement Fibonacci using dynamic programming
+    
+    if (memo_fibo.has(n)) return memo_fibo.get(n)
+    memo_fibo.set(n ,  fibonacci(n-2) + fibonacci(n-1))
+    return memo_fibo.get(n)
 }
 
 // Test cases
-//assert.strictEqual(fibonacci(10), 55, "Fibonacci Test Failed");
+assert.strictEqual(fibonacci(10), 55, "Fibonacci Test Failed");
 
 // Quiz
 // Q1: What is the time complexity of the Fibonacci algorithm using dynamic programming?
