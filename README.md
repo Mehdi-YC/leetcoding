@@ -4,6 +4,11 @@ trying leetcode in Rust, Pyhon,JS and maybe Go...Zig....Ocaml.... well, any new 
 ---
 ---
 
+[the best visualisation for all algo patterns](https://www.hellointerview.com/learn/code) 
+
+[the best design patterns (allin one)](https://refactoring.guru/files/design-patterns-en-demo.pdf)
+
+[clean code](https://github.com/GunterMueller/Books-3/blob/master/Clean%20Code.pdf)
 
 # Essential Patterns & Algorithms for Interviews and Problem Solving
 
@@ -212,6 +217,13 @@ This list covers the most important patterns and algorithms used in coding inter
 
 [awesome DSA](https://github.com/otabek-kholmirzaev/awesome-dsa)
 
+
+[Algos patterns repo](https://github.com/Chanda-Abdul/Several-Coding-Patterns-for-Solving-Data-Structures-and-Algorithms-Problems-during-Interviews)
+
+[Algors patterns pdf](https://homel.vsb.cz/~fai0013/Kniha_Algoritmy.pdf)
+
+
+
 ## vizualisation tools:
 https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/bubble_sort/
 https://visualgo.net/
@@ -234,16 +246,3 @@ This table compares various programming languages based on their built-in suppor
 | **Lua**   | 🟧 `lua-csv` | 🟧 `cjson`    | 🟧 `lapis` (with OpenResty) | ❌        | ❌               | ⚡ (~C)      | Games, embedded, scripting | ✅ (but limited) | 🟧 `argparse` |
 | **V**     | ✅ `csv`    | ✅ `json`      | ✅ `vweb`        | ✅        | ✅               | ⚡ (~C)      | Web, CLI, fast tools | ✅ Very Good | ✅ Built-in (`os.args`) |
 | **D**     | ✅ `std.csv` | ✅ `std.json`  | ✅ `vibe.d`      | ✅        | ✅               | ⚡ (~C)      | Systems, finance, scripting | ✅ Excellent | ✅ `arsd.argparse` |
-
-## 🟧 Orange (Needs Third-Party Library)
-- **C and Lua** need external libraries for almost everything beyond basic file I/O.
-- **Lua lacks iterators and function chaining** natively.
-- **C requires manual CLI argument handling**, making it harder for CLI tools.
-
-## 🏆 Best for CLI & API Development
-1. **Rust & Go** → **Fast, robust, and easy CLI & API development.**  
-2. **V & D** → **Modern, fast, built-in CLI handling, simple syntax.**  
-3. **Python** → **Easiest to write, but slow for large-scale CLI tools.**  
-
-🔥 **V and D are underrated, but fantastic for fast CLI & web tools!** 🚀
-
