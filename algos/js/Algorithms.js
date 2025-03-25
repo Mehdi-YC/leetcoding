@@ -8,20 +8,20 @@ const assert = require("assert")
  * Time Complexity: O(log n)
  */
 function binarySearch(arr, target) {
-    if (target < arr[0] || target > arr[arr.length-1]) return -1
-    let start  = 0
-    let end    = arr.length -1
-    let needle = Math.floor(arr.length/2)
+    if (target < arr[0] || target > arr[arr.length - 1]) return -1
+    let start = 0
+    let end = arr.length - 1
+    let needle = Math.floor(arr.length / 2)
 
-    while (start<=end){
-        if(target>arr[needle]) {
-            end = needle -1
+    while (start <= end) {
+        if (target > arr[needle]) {
+            end = needle - 1
             needle = Math.floor((end + start) / 2)
         }
-        else if (target < arr[needle]){
-            start = needle +1
+        else if (target < arr[needle]) {
+            start = needle + 1
             needle = Math.floor((start + end) / 2)
-            
+
         }
         else return needle
     }
@@ -50,18 +50,18 @@ assert.strictEqual(binarySearch(sortedArray, 10), -1, "Binary Search Test 2 Fail
  * Time Complexity: O(n log n)
  */
 function mergeSort(arr) {
-    function mergeSortAlgorithm(arr,start,end){
-        if (start>=end) return arr
+    function mergeSortAlgorithm(arr, start, end) {
+        if (start >= end) return arr
 
-        let middle = Math.floor((start+end)/2)
-        mergeSortAlgorithm(arr,start,middle)
-        mergeSortAlgorithm(arr,middle+1,end)
-        merge(arr,start,middle,end)
+        let middle = Math.floor((start + end) / 2)
+        mergeSortAlgorithm(arr, start, middle)
+        mergeSortAlgorithm(arr, middle + 1, end)
+        merge(arr, start, middle, end)
     }
 
     function merge(data, left, middle, right) {
         let left_partition = data.slice(left, middle + 1);
-        let right_partition = data.slice(middle + 1, right + 1); 
+        let right_partition = data.slice(middle + 1, right + 1);
 
         let leftIdx = 0, rightIdx = 0, dataIdx = left;
 
@@ -81,7 +81,7 @@ function mergeSort(arr) {
             data[dataIdx++] = right_partition[rightIdx++];
         }
     }
-    mergeSortAlgorithm(arr,0,arr.length-1)
+    mergeSortAlgorithm(arr, 0, arr.length - 1)
     return arr
 }
 
@@ -247,18 +247,27 @@ function lcs(str1, str2) {
  * Fibonacci Sequence: Computes the nth Fibonacci number using dynamic programming.
  * Time Complexity: O(n)
  */
-let memo_fibo  = new Map()
+
+function fibonacc_old(n) {
+    if (n === 0) return 0;
+    if (n === 1) return 1;
+    return fibonacci_old(n - 1) + fibonacci_old(n - 2);
+}
+
+let memo_fibo = new Map()
 memo_fibo.set(0, 0)
-memo_fibo.set(1,1)
+memo_fibo.set(1, 1)
 function fibonacci(n) {
-    
+
     if (memo_fibo.has(n)) return memo_fibo.get(n)
-    memo_fibo.set(n ,  fibonacci(n-2) + fibonacci(n-1))
+    memo_fibo.set(n, fibonacci(n - 2) + fibonacci(n - 1))
     return memo_fibo.get(n)
 }
 
 // Test cases
 assert.strictEqual(fibonacci(10), 55, "Fibonacci Test Failed");
+
+
 
 // Quiz
 // Q1: What is the time complexity of the Fibonacci algorithm using dynamic programming?
