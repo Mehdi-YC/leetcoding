@@ -4,11 +4,17 @@ trying leetcode in Rust, Pyhon,JS and maybe Go...Zig....Ocaml.... well, any new 
 ---
 ---
 
-[the best visualisation for all algo patterns](https://www.hellointerview.com/learn/code) 
+[Algo patterns](https://www.hellointerview.com/learn/code) 
 
-[the best design patterns (allin one)](https://refactoring.guru/files/design-patterns-en-demo.pdf)
+[Design patterns](https://refactoring.guru/files/design-patterns-en-demo.pdf)
 
 [clean code](https://github.com/GunterMueller/Books-3/blob/master/Clean%20Code.pdf)
+
+[Networking essentials](https://www.youtube.com/watch?v=SHkbPm1Wrno)
+
+[Rust specefic](https://rust-unofficial.github.io/patterns/rust-design-patterns.pdf)
+
+[python specefic](https://carlosgrande.me/python-design-patterns/)
 
 # Essential Patterns & Algorithms for Interviews and Problem Solving
 
@@ -213,8 +219,6 @@ This list covers the most important patterns and algorithms used in coding inter
 
 # repos to check
 
-[awesome-algorithms by tayllan](https://github.com/tayllan/awesome-algorithms)
-
 [awesome DSA](https://github.com/otabek-kholmirzaev/awesome-dsa)
 
 
@@ -225,9 +229,9 @@ This list covers the most important patterns and algorithms used in coding inter
 
 
 ## vizualisation tools:
-https://thimbleby.gitlab.io/algorithm-wiki-site/wiki/bubble_sort/
-https://visualgo.net/
-https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+https://thimbleby.gitlab.io/algorithm-wiki-site/
+
+
 
 
 ## languages list based on my interest
@@ -246,3 +250,25 @@ This table compares various programming languages based on their built-in suppor
 | **Lua**   | 🟧 `lua-csv` | 🟧 `cjson`    | 🟧 `lapis` (with OpenResty) | ❌        | ❌               | ⚡ (~C)      | Games, embedded, scripting | ✅ (but limited) | 🟧 `argparse` |
 | **V**     | ✅ `csv`    | ✅ `json`      | ✅ `vweb`        | ✅        | ✅               | ⚡ (~C)      | Web, CLI, fast tools | ✅ Very Good | ✅ Built-in (`os.args`) |
 | **D**     | ✅ `std.csv` | ✅ `std.json`  | ✅ `vibe.d`      | ✅        | ✅               | ⚡ (~C)      | Systems, finance, scripting | ✅ Excellent | ✅ `arsd.argparse` |
+
+
+
+# To learn
+ - Odoo (technical / functional)
+ - Wordpress
+ - Directus
+ - n8n
+ - Aapanel
+
+ - Python
+    - Django / Fastapi
+    - pandas
+ - Js
+    - svelte(kit)
+    - drizzle
+    - auth.js
+ - Rust
+
+ - linux
+ - docker (lazydocker)
+ - git (lazygit)
