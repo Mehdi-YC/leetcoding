@@ -103,13 +103,41 @@ assert.deepStrictEqual(mergeSort(unsortedArray), [1, 3, 5, 7, 9], "Merge Sort Te
  * Quick Sort: Sorts an array using a pivot element.
  * Time Complexity: O(n log n) on average, O(n^2) in the worst case.
  */
-function quickSort(arr) {
-    // TODO: Implement quick sort
+function quickSort_algorithm(arr) {
+    function quicksort(arr,l,r){
+        if (l < r){
+            let needle = Math.floor((l+r)/2)
+            let pivot = arr[needle]
+            let index = partition(arr,l,r,pivot)
+            quicksort(arr,l,index-1)
+            quicksort(arr,index,r)
+        }
+    }
+
+    function partition(arr,l,r,pivot){
+        while(arr[l] < pivot){
+            l+=1
+        }
+        while(arr[r] > pivot){
+            r+=1
+        }
+        if(l<=r){
+            const tmp = arr[l]
+            arr[l] = arr[r]
+            arr[r] = tmp
+            l+=1
+            r-=1
+        }
+        return l
+    }
+
+    quicksort(arr,0,arr.length-1)
+    return arr
 }
 
 // Test cases
 const unsortedArray2 = [9, 3, 7, 5, 1];
-//assert.deepStrictEqual(quickSort(unsortedArray2), [1, 3, 5, 7, 9], "Quick Sort Test Failed");
+assert.deepStrictEqual(quickSort_algorithm(unsortedArray2), [1, 3, 5, 7, 9], "Quick Sort Test Failed");
 
 // Quiz
 // Q1: What is the worst-case time complexity of quick sort?

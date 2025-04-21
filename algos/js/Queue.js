@@ -1,3 +1,5 @@
+// this is made the easiest way and can be also done with the same style as the other ones
+const assert = require("assert")
 class Queue {
     constructor() {
         this.items = [];
@@ -5,27 +7,28 @@ class Queue {
 
     // TODO: Add an element to the queue
     enqueue(element) {
-        // Implement this
+        this.items =  [element,...this.items]
     }
 
     // TODO: Remove an element from the queue
     dequeue() {
-        // Implement this
+        return this.items.pop()
     }
 
     // TODO: Peek at the front element without removing it
     peek() {
-        // Implement this
+        return this.items[this.items.length-1]
     }
 
     // TODO: Check if the queue is empty
     isEmpty() {
-        // Implement this
+        if (!this.items.length) return true
+        return false
     }
 
     // TODO: Get the size of the queue
     size() {
-        // Implement this
+        return this.items.length
     }
 }
 
