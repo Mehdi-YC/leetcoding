@@ -1,3 +1,5 @@
+use std::f32::INFINITY;
+
 #[derive(Debug)]
 struct ListNode {
 	value: i32,
@@ -11,7 +13,7 @@ struct LinkedList {
 
 impl LinkedList {
 	pub fn new() -> Self {
-		// TODO
+
 		Self { head: None }
 	}
 
@@ -32,24 +34,51 @@ impl LinkedList {
 	}
 
 	pub fn prepend(&mut self, value: i32) {
-		// TODO
-		unimplemented!()
+		let new_node: Box<ListNode> = Box::new(ListNode { value, next: self.head.take() });
+
+			self.head = Some(new_node);
+		
 	}
+	
 
 	pub fn size(&self) -> usize {
-		// TODO
-		unimplemented!()
+		let mut n:usize = 0;
+		let mut current:Option<&Box<ListNode>> = self.head.as_ref();
+
+		while let Some(node) = current {
+			n += 1;
+			current = node.next.as_ref();
+		}
+
+		n
 	}
+	
 
 	pub fn sum(&self) -> i32 {
-		// TODO
-		unimplemented!()
-	}
+		let mut sum:i32 = 0;
+		let mut current:Option<&Box<ListNode>> = self.head.as_ref();
 
-	pub fn mul(&self) -> Option<i32> {
-		// TODO
-		unimplemented!()
+		while let Some(node) = current {
+			sum += node.value;
+			current = node.next.as_ref();
+		}
+
+		sum
 	}
+	
+
+	pub fn mul(&self) -> i32 {
+		let mut mul:i32 = 1;
+		let mut current:Option<&Box<ListNode>> = self.head.as_ref();
+
+		while let Some(node) = current {
+			mul *= node.value;
+			current = node.next.as_ref();
+		}
+
+		mul
+	}
+	
 
 	pub fn values(&self) -> Vec<i32> {
 		let mut rv = vec![];
@@ -69,28 +98,54 @@ impl LinkedList {
 	}
 
 	pub fn clear(&mut self) {
-		// TODO
-		unimplemented!()
+		self.head= None;
 	}
 
 	pub fn find(&self, value: i32) -> bool {
-		// TODO
-		unimplemented!()
+		let mut current = self.head.as_ref();
+		while let Some(node) = current {
+			if (node.value == value){
+				return true;
+			}
+			current = node.next.as_ref();
+		}
+	
+		false
 	}
+	
 
 	pub fn average(&self) -> Option<f64> {
-		// TODO
-		unimplemented!()
+		if self.size() > 0 {return Some(self.average().unwrap() / self.size() as f64)}
+		return None
 	}
 
 	pub fn min(&self) -> Option<i32> {
-		// TODO
-		unimplemented!()
+		if Some(self.head.as_ref()).is_none(){ return None}
+		let mut current = self.head.as_ref();
+		let mut n:i32 = INFINITY as i32; 
+		while let Some(node) = current {
+			if (node.value < n){
+				n = node.value
+			}
+			current = node.next.as_ref();
+		}
+	
+		Some(n)
 	}
+	
 
 	pub fn max(&self) -> Option<i32> {
-		// TODO
-		unimplemented!()
+		if Some(self.head.as_ref()).is_none(){ return None}
+		let mut current = self.head.as_ref();
+		let mut n:i32 = -INFINITY as i32; 
+		while let Some(node) = current {
+			if (node.value > n){
+				n = node.value
+			}
+			current = node.next.as_ref();
+		}
+	
+		Some(n)
 	}
 }
 
@@ -135,7 +190,7 @@ mod tests {
 	#[test]
 	fn test_mul() {
 		let list = setup_list();
-		assert_eq!(list.mul(), Some(6000));
+		assert_eq!(list.mul(), 6000);
 	}
 
 	#[test]
